@@ -11,12 +11,15 @@ namespace Tyuiu.BrovinaYV.Sprint3.Task2.V14.Lib
     {
         public double GetMultiplySeries(int value, int startValue, int stopValue)
         {
-            double multSeries = 1.0;
+            double multSeries = 1;
+            int r = startValue;
             do
             {
-                multSeries *=  Math.Pow((value/startValue),3);
-                startValue++; 
-            } while (startValue <= stopValue);
+                
+                multSeries *= (Math.Pow(value, 3)/ Math.Pow(r, 3));
+                r++; 
+            } while (r <= stopValue);
+           
             return Math.Round(multSeries, 3);
         }
     }
